@@ -1,14 +1,16 @@
+'use strict'
+const co = require('co')
 const prompt = require('co-prompt')
 const config = require('../templates')
 const chalk = require('chalk')
 const fs = require('fs')
 
 module.exports=()=>{
-    (async()=>{
+    co(function *(){
         //分步接收用户输入
-        let tplName = await prompt('Template name: ')
-        let gitUrl = await prompt('Git https link: ')
-        let branch = await prompt('Branch: ')
+        let tplName = yield prompt('Template name: ')
+        let gitUrl = yield prompt('Git https link: ')
+        let branch = yield prompt('Branch: ')
         //避免重复添加
         if (!config.tpl[tplName]) {
             config.tpl[tplName] = {}

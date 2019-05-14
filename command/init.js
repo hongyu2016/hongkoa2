@@ -1,13 +1,15 @@
+'use strict'
+const co = require('co')
 const exec = require('child_process').exec
 const prompt = require('co-prompt')
 const config = require('../templates')
 const chalk = require('chalk')
 
 module.exports = () => {
-    (async()=>{
+    co(function *() {
         // 处理用户输入
-        let tplName = await prompt('Template name: ')
-        let projectName = await prompt('Project name: ')
+        let tplName = yield prompt('Template name: ')
+        let projectName = yield prompt('Project name: ')
         let gitUrl
         let branch
 
