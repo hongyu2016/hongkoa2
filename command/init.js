@@ -4,7 +4,7 @@ const config = require('../templates')
 const chalk = require('chalk')
 
 module.exports = () => {
-    async(()=>{
+    (async()=>{
         // 处理用户输入
         let tplName = await prompt('Template name: ')
         let projectName = await prompt('Project name: ')

@@ -4,7 +4,7 @@ const chalk = require('chalk')
 const fs = require('fs')
 
 module.exports=()=>{
-    async(()=>{
+    (async()=>{
         //分步接收用户输入
         let tplName = await prompt('Template name: ')
         let gitUrl = await prompt('Git https link: ')

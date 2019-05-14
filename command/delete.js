@@ -4,9 +4,9 @@ const chalk = require('chalk')
 const fs = require('fs')
 
 module.exports = () =>{
-    async(()=>{
+    (async()=>{
         // 接收用户输入的参数
-        let tplName = yield prompt('Template name: ')
+        let tplName = await prompt('Template name: ')
     })
     // 删除对应的模板
     if (config.tpl[tplName]) {
@@ -25,5 +25,5 @@ module.exports = () =>{
         console.log('\n')
         process.exit()
     })
-    
+
 }
