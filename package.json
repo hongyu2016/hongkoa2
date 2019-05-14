@@ -1,0 +1,24 @@
+{
+  "name": "hongkoa2",
+  "version": "1.0.0",
+  "description": "自定义 koa2 脚手架",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "hongkoa2": "bin/hongkoa2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hongyu2016/hongkoa2.git"
+  },
+  "author": "羽歌",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "co": "^4.6.0",
+    "co-prompt": "^1.0.0",
+    "commander": "^2.20.0"
+  }
+}
